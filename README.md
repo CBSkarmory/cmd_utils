@@ -1,7 +1,7 @@
 # cmd_utils
 
 ## How To Use
- - be using linux/unix
+ - be using unix
  - get this repo with `git clone https://github.com/CBSkarmory/cmd_utils.git` or 
  `git clone git@github.com:CBSkarmory/cmd_utils.git` (for https and ssh respectively)
  - add it to your PATH. (You can add `export PATH=$PATH:<directory name here>` to 

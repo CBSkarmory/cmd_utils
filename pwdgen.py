@@ -7,9 +7,7 @@ def gen(length):
     return ''.join(tmp)
 
 if __name__ == "__main__":
-    print("""================================
-        Random Password Generator
-    ================================""")
+    print("================================\n   Random Password Generator\n================================")
     print("recommendation: length > 8")
     length = int(input("length:"))
     reps = int(input("reps:"))

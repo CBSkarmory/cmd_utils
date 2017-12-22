@@ -3,7 +3,7 @@ JC = javac
 
 all: Average.class
 
-Average.class:
+Average.class: Average.java
 	$(JC) Average.java
 
 clean:

@@ -13,9 +13,17 @@ def gen(length):
         tmp[c]= CHARS[random.randint(0,len(CHARS)-1)]
     return ''.join(tmp)
 
+def err(message, error_code):
+    sys.stderr.write("[ERROR] %s" % message)
+    sys.exit(error_code)
+
+def note(message):
+    sys.stderr.write("[NOTE]  %s" % message)
+
 if __name__ == "__main__":
     argv= sys.argv
     argc= len(argv)
+    length= -1
     try:
         if argc == 1:
             print("================================\n   Random Password Generator\n================================")
@@ -26,13 +34,13 @@ if __name__ == "__main__":
             length= int(argv[1])
             reps= int(argv[2])
         else:
-            print("[ERROR] Invalid number of arguments")
-            print("[NOTE]  Usage is as follows: (python) %s [length] [reps]" % SELF_FILENAME)
-            sys.exit(ERRORCODE_NUM_ARGS)
+            note("Usage is as follows: (python) %s [length] [reps]" % SELF_FILENAME)
+            err("Invalid number of arguments", ERRORCODE_NUM_ARGS)
     except ValueError:
-        print("[ERROR] Invalid argument detected; expected 2 numbers")
-        print(SELF_FILENAME)
-        sys.exit(ERRORCODE_PARSEINT)
+        err("Invalid argument detected; expected 2 numbers", ERRORCODE_PARSEINT)
+
+    if -1 == length:
+        err("Fatal error occurred", -1)
 
     sysout= open(OUT_FILE, 'w')#opens out.txt in write mode
     for i in range(reps):

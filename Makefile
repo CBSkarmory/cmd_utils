@@ -1,10 +1,10 @@
 CC = gcc
-JC = javac
+JAVAC = javac
 
 all: Average.class
 
 Average.class:
-	$(JC) Average.java
+	$(JAVAC) Average.java
 
 clean:
 	\rm -f *.class *~ *.x

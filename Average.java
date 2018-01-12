@@ -13,9 +13,15 @@ public class Average {
         for (int i= 1; i < args.length; ++i) {
             try {
                 String[] split= args[i].split(",");
-                double num= Double.parseDouble(split[0]);
-                double weight= Double.parseDouble(split[1]);
-                sum += (num * weight);
+		double num= Double.parseDouble(split[0]), weight= 1.0;
+		if (split.length == 2) {   
+		    weight= Double.parseDouble(split[1]);
+                } else {
+		    if (split.length > 2) {
+			err(-3, "Invalid formatting");
+		    }
+		}
+		sum += (num * weight);
                 count += weight;
             } catch (NumberFormatException e) {
                 err(-2, "NumberFormatException");

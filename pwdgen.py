@@ -42,15 +42,15 @@ if __name__ == "__main__":
     if -1 == length:
         err("Fatal error occurred", -1)
 
-    sysout= open(OUT_FILE, 'w')#opens out.txt in write mode
+    sysout= open(OUT_FILE, 'w')#opens output file in write mode
     for i in range(reps):
         sysout.write(gen(length))
         sysout.write("\n")
     sysout.close()
     print("\nresults are in %s" % OUT_FILE)
     print("close file before you press enter.")
-    a = input("press <RET> (enter) to CLEAR FILE and exit")
-    sysout = open(OUT_FILE, 'w')#opens out.txt in write mode
+    input("press <RET> (enter) to CLEAR FILE and exit")
+    sysout = open(OUT_FILE, 'w')#opens output file in write mode
     sysout.truncate()
     sysout.close()
     os.remove(OUT_FILE)

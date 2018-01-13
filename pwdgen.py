@@ -15,13 +15,16 @@ def gen(length):
     return ''.join(tmp)
 
 def err(message, error_code):
-    sys.stderr.write("[ERROR] %s" % message)
+    sys.stderr.write("[ERROR] %s\n" % message)
     sys.exit(error_code)
 
 def note(message):
-    sys.stderr.write("[NOTE]  %s" % message)
+    sys.stderr.write("[NOTE]  %s\n" % message)
 
 if __name__ == "__main__":
+    #version checker
+    if not PY_VER_3_PLUS:
+        note("Please consider using python ver 3+")
     argv= sys.argv
     argc= len(argv)
     length= -1

@@ -1,5 +1,6 @@
 import random, os, sys
 
+PY_VER_3_PLUS = sys.version_info[0] > 2
 SELF_FILENAME = "pwdgen.py"
 OUT_FILE = "generator_out.txt"
 CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
@@ -49,7 +50,10 @@ if __name__ == "__main__":
     sysout.close()
     print("\nresults are in %s" % OUT_FILE)
     print("close file before you press enter.")
-    input("press <RET> (enter) to CLEAR FILE and exit")
+    if PY_VER_3_PLUS:
+        input("press <RET> (enter) to CLEAR FILE and exit")
+    else:
+        raw_input("press <RET> (enter) to CLEAR FILE and exit")
     sysout = open(OUT_FILE, 'w')#opens output file in write mode
     sysout.truncate()
     sysout.close()

@@ -15,4 +15,4 @@
 |Prorgam|usage                       |
 |-------|:---------------------------|
 |average calculator|`java Average`|
-|password generator|`python pwdgen.py`|
+|password generator|`python pwdgen.py` or `python3 pwdgen.py`|

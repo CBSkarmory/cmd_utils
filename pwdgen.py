@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random, os, sys
 
 PY_VER_3_PLUS = sys.version_info[0] > 2

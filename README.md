@@ -10,6 +10,7 @@
  - compile the files you want. Generally, use `<compiler> <file name>`: `javac` for Java, and `gcc` for C. 
  - alternatively, use `make`.
  - set up aliases to run programs faster. For example, you can alias `avg` to `java Average`.
+ - use `chmod u+x <PROGRAM_NAME>` for python scripts to run directly
 
 ## Tool Usage
 |Prorgam|usage                       |

@@ -1,4 +1,5 @@
 # cmd_utils
+[![Build Status](https://travis-ci.org/CBSkarmory/cmd_utils.png)](https://travis-ci.org/CBSkarmory/cmd_utils)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## How To Use

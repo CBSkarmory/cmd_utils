@@ -1,4 +1,5 @@
 # cmd_utils
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## How To Use
  - be using unix
@@ -16,4 +17,4 @@
 |Prorgam|usage                       |
 |-------|:---------------------------|
 |average calculator|`java Average`|
-|password generator|`python3 pwdgen.py`|
+|password generator|`./pwdgen.py`|

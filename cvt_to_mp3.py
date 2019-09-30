@@ -7,15 +7,15 @@ import subprocess
 
 
 PROCESS_LIMIT = multiprocessing.cpu_count()
-
+VALID_EXTENSIONS = {'wav', 'm4a'}
 
 def get_outfile_path(file_path: str) -> str:
     if not os.path.exists(file_path):
         raise ValueError(f'file {file_path} not found')
     fn, ext = os.path.splitext(file_path)
     ext = ext[1:]
-    if 'wav' != ext:
-        raise ValueError(f'expected wav file, got {ext} file')
+    if ext not in VALID_EXTENSIONS:
+        raise ValueError(f'expected extension in {VALID_EXTENSIONS}, got {ext} file')
     out_path = f'{fn}.mp3'
     print(out_path)
     if os.path.exists(out_path):

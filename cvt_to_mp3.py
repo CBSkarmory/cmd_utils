@@ -7,7 +7,7 @@ import subprocess
 
 
 PROCESS_LIMIT = multiprocessing.cpu_count()
-VALID_EXTENSIONS = {'wav', 'm4a'}
+VALID_EXTENSIONS = {'wav', 'm4a', 'ogg'}
 
 def get_outfile_path(file_path: str) -> str:
     if not os.path.exists(file_path):

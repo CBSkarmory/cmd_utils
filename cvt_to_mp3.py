@@ -23,12 +23,14 @@ def get_outfile_path(file_path: str) -> str:
     return out_path
 
 
-def cvt_single_wav(io_tup):
+def cvt_single_wav(io_tup, mp3_kbps=256):
+    mp3_kbps = min(mp3_kbps, 320)
+    mp3_kbps = max(128, mp3_kbps)
     infile, outfile = io_tup
     subprocess.run([
         '/usr/bin/ffmpeg', '-i', infile, '-vn', '-ar', '44100',
         '-ac', '2',
-        '-b:a', '320k',
+        '-b:a', f'{str(mp3_kbps)}k',
         outfile
     ])
 
